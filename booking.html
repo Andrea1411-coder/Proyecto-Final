@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservas - MESA+</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body >
+    <header class="mini-bar">
+    <div class="top-left">
+      <img src="logo mesa+.png" alt="Logo MESA+" class="logo-img">
+      <h1 class="logo-text">MESA+ - Reservaciones</h1>
+    </div>
+    <div class="top-right">
+      <a href="index.html"><img src="https://img.icons8.com/ios-filled/20/home.png" alt="Inicio"></a>
+      <a href="restaurants.html"><img src="https://img.icons8.com/ios-filled/20/shop.png" alt="Restaurantes"></a>
+      <a href="favoritos.html"><img src="https://img.icons8.com/ios-filled/20/like.png" alt="Favoritos"></a>
+    </div>
+  </header>
+
+  <main class="reservas">
+    <h2>Reserva tu mesa</h2>
+    <form class="formulario">
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" name="nombre" required />
+
+      <label for="fecha">Fecha:</label>
+      <input type="date" id="fecha" name="fecha" required />
+
+      <label for="hora">Hora:</label>
+      <input type="time" id="hora" name="hora" required />
+
+      <label for="personas">Número de personas:</label>
+      <input type="number" id="personas" name="personas" min="1" required />
+
+      <label for="pedido">¿Deseas pedir por anticipado?</label>
+      <textarea id="pedido" name="pedido" placeholder="Escribe tu pedido aquí..."></textarea>
+
+      <button type="submit" class="btn">Confirmar Reserva</button>
+    </form>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 MESA+. Todos los derechos reservados.</p>
+  </footer>
+    
+</body>
+</html>

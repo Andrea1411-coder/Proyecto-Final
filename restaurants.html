@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurantes - MESA+</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="home">
+  <header class="mini-bar">
+    <div class="top-left">
+      <img src="logo mesa+.png" alt="Logo MESA+" class="logo-img">
+      <h1 class="logo-text">MESA+ - Restaurantes</h1>
+    </div>
+    <div class="top-right">
+      <a href="index.html"><img src="https://img.icons8.com/ios-filled/20/home.png" alt="Inicio"></a>
+      <a href="restaurants.html"><img src="https://img.icons8.com/ios-filled/20/shop.png" alt="Restaurantes"></a>
+      <a href="favoritos.html"><img src="https://img.icons8.com/ios-filled/20/like.png" alt="Favoritos"></a>
+    </div>
+  </header>
+
+
+  <main class="restaurantes">
+    <h2>Restaurantes cercanos</h2>
+    <div class="carrusel-restaurantes">
+      <button class="flecha izquierda" onclick="moverIzquierda()">&#10094;</button>
+
+      <div class="scroll-carrusel" id="galeria">
+        <!-- Restaurante 1 -->
+        <div class="card">
+          <img src="https://img.freepik.com/foto-gratis/mitad-parrilla-mitad-filetes-crudos-parrilla_114579-1980.jpg?semt=ais_items_boosted&w=740" alt="Restaurante 1">
+          <h3>La Parrilla Gourmet</h3>
+          <p>Comida local | ⭐ 4.8</p>
+          <a href="booking.html" class="btn">Reservar</a>
+        </div>
+        <!-- Restaurante 2 -->
+        <div class="card">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCPt-emIxTsME8hX_5zORRovcorgBHQs-m4A&s" alt="Restaurante 2">
+          <h3>Sushi House</h3>
+          <p>Japonesa | ⭐ 4.5</p>
+          <a href="booking.html" class="btn">Reservar</a>
+        </div>
+        <!-- Restaurante 3 -->
+        <div class="card">
+          <img src="https://traveler.marriott.com/es/wp-content/uploads/sites/2/2021/09/GI-1194264404-Vegan-Pasta-1920x1080.jpg" alt="Restaurante 3">
+          <h3>Green Bowl</h3>
+          <p>Vegana | ⭐ 4.7</p>
+          <a href="booking.html" class="btn">Reservar</a>
+        </div>
+        <!-- Restaurante 4 -->
+        <div class="card">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2wIv-rGpU1OGRFrZcmBSrmUDlqgM4WHb_Ag&s" alt="Restaurante 4">
+          <h3>Burger Station</h3>
+          <p>Comida rápida | ⭐ 4.6</p>
+          <a href="booking.html" class="btn">Reservar</a>
+        </div>
+        <!-- Restaurante 5 -->
+        <div class="card">
+          <img src="https://st3.idealista.it/news/archivie/styles/fullwidth_xl/public/2022-10/media/image/aurelien-lemasson-theobald-x00czbt4dfk-unsplash.jpg?VersionId=V5HNX7jAzvpmOwawvIKLGNATTI3v_m09&itok=KeH-F7_2" alt="Restaurante 5">
+          <h3>Pizza Bella</h3>
+          <p>Italiana | ⭐ 4.4</p>
+          <a href="booking.html" class="btn">Reservar</a>
+        </div>
+        <!-- Restaurante 6 -->
+        <div class="card">
+          <img src="https://images.aws.nestle.recipes/resized/2024_10_23T08_34_55_badun_images.badun.es_pastelitos_de_chocolate_blanco_y_queso_con_fresas_1290_742.jpg" alt="Restaurante 6">
+          <h3>Dessert Dreams</h3>
+          <p>Postres | ⭐ 4.9</p>
+          <a href="booking.html" class="btn">Reservar</a>
+        </div>
+      </div>
+
+      <button class="flecha derecha" onclick="moverDerecha()">&#10095;</button>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 MESA+. Todos los derechos reservados.</p>
+  </footer>
+    <script>
+        const galeria = document.getElementById('galeria');
+        const cards = galeria.querySelectorAll('.card');
+
+        function getCardWidth() {
+            if (cards.length > 0) {
+                const cardStyle = getComputedStyle(cards[0]);
+                const cardWidth = cards[0].offsetWidth; 
+                const cardMarginLeft = parseFloat(cardStyle.marginLeft);
+                const cardMarginRight = parseFloat(cardStyle.marginRight);
+                return cardWidth + cardMarginLeft + cardMarginRight;
+            }
+            return 0;
+        }
+
+        function getScrollAmount() {
+            return getCardWidth() * 3;
+        }
+        
+        function moverDerecha() {
+            galeria.scrollBy({
+                left: getScrollAmount(),
+                behavior: 'smooth' 
+            });
+        }
+
+        function moverIzquierda() {
+            galeria.scrollBy({
+                left: -getScrollAmount(),
+                behavior: 'smooth' 
+            });
+        }
+    </script>
+</body>
+</html>
