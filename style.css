@@ -109,7 +109,7 @@ body {
 
 .nav-btn {
   background-color: #35a0b5;
-  color: rgb(167, 228, 158);
+  color: rgb(255, 255, 255);
   padding: 0.7rem 1.3rem;
   border-radius: 6px;
   font-weight: bold;
@@ -238,6 +238,8 @@ footer {
 .reservas h2 {
   text-align: center;
   margin-bottom: 1.5rem;
+  font-weight: bold;
+  font-size: 30px;
 }
 
 .formulario {
